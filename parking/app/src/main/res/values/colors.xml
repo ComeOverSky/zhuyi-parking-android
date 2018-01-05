@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorPrimary">#262932</color>
+    <color name="colorPrimaryDark">#262932</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--自定义-->
+    <color name="black">#262932</color>
+    <color name="gooden">#B3872D</color>
+    <color name="light_black">#666666</color>
+    <color name="weight_black">#353535</color>
+
+
+</resources>

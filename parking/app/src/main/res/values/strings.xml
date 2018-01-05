@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">智慧停车</string>
+    <string name="tip">"避免影响后续使用,请先实名认证"</string>
+    <string name="auth">"实名认证"</string>
+    <string name="car">我的汽车</string>
+    <string name="order">我的订单</string>
+    <string name="pay">我的钱包</string>
+
+
+</resources>

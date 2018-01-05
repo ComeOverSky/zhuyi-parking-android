@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "zhuyi.com.parking"
+        minSdkVersion 22
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk { //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '26.0.2'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //rxjavas
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    //Gson converter
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //RxJava2 Adapter
+    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    //okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //高德地图jar包
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //2D地图
+    compile 'com.amap.api:map2d:latest.integration'
+    //导航
+    compile 'com.amap.api:navi-3dmap:latest.integration'
+    //搜索
+    compile 'com.amap.api:search:latest.integration'
+    //定位
+    compile 'com.amap.api:location:latest.integration'
+    //glide
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    //android 常用工具类
+    compile 'com.github.vondear:RxTools:v1.7.6.2'//请替换成上方 JitPack 最新的版本号
+    //自定义搜索框
+    compile 'com.carson_ho:SearchLayout:1.0.1'
+    implementation project(':slidingMenu')
+
+}
